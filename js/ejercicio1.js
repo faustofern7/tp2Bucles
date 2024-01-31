@@ -1,15 +1,20 @@
-let edad = parseInt(prompt("Ingrese su edad: "));
+let edad;
 
-if(isNaN(edad)){
-    document.write("La edad ingresada no es un número válido");
-}
-else{
-    if(edad>=18){
-        document.write("<br> ya puede conducir");
-    } 
-    else{
-        document.write("<br> No tiene la edad suficiente para conducir");
+do{
+    edad = parseInt(prompt("Ingrese su edad: "));
+
+    if(isNaN(edad)){
+        document.write("La edad ingresada no es un número válido");
     }
-}
+    else{
+        if(edad>=18){
+            document.write("<br> ya puede conducir");
+        } 
+        else{
+            document.write("<br> No tiene la edad suficiente para conducir");
+        }
+    }
+    
+}while(confirm("Desea ingresar otra edad?"));
 
 
